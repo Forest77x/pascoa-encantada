@@ -2,162 +2,215 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Ovo de Páscoa Gourmet | Páscoa Exclusiva</title>
+<title>Trio Gourmet | Páscoa Exclusiva</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
+/* --- CONFIGURAÇÕES GERAIS E CORES --- */
 :root{
-  --bg:#120505;
-  --bg2:#2a0d0d;
-  --gold:#f5c16c;
-  --gold2:#ffdf9e;
-  --text:#ffffff;
-  --muted:#d0c2c2;
+  --bg-dark: #0f0404; /* Fundo mais profundo */
+  --bg-chocolate: #2a0d0d;
+  --gold-primary: #f5c16c;
+  --gold-light: #ffdf9e;
+  --text-light: #ffffff;
+  --text-muted: #d0c2c2;
+  --font-heading: 'Playfair Display', serif; /* Fonte sofisticada para títulos */
+  --font-body: 'Inter', sans-serif; /* Fonte limpa para leitura */
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Inter, Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-  background:
-    radial-gradient(1200px 500px at 50% -10%, #3b1414, transparent),
-    var(--bg);
-  color:var(--text);
+  font-family: var(--font-body);
+  /* Gradiente de fundo mais rico e profundo */
+  background:
+    radial-gradient(circle at 50% 0%, rgba(94, 33, 33, 0.4) 0%, transparent 60%),
+    linear-gradient(to bottom, #1a0808, #0d0202);
+  color:var(--text-light);
+  line-height: 1.6;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 header{
-  padding:28px 20px;
-  text-align:center;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:30px 20px;
+  text-align:center;
+  border-bottom:1px solid rgba(245, 193, 108, 0.1); /* Linha sutil dourada */
 }
 header h1{
-  color:var(--gold);
-  letter-spacing:.5px;
+  font-family: var(--font-heading);
+  color:var(--gold-primary);
+  letter-spacing: 1px;
+  font-size: 1.8rem;
 }
 
-/* HERO */
+/* --- HERO SECTION (Principal) --- */
 .hero{
-  max-width:1200px;
-  margin:70px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
+  max-width:1200px;
+  margin:80px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1fr 0.8fr; /* Ajuste para equilibrar texto e imagem */
+  gap:70px;
+  align-items: center;
 }
 
 @media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
+  .hero{
+    grid-template-columns:1fr;
+    gap:50px;
+    text-align: center;
+  }
 }
 
-/* TEXTO */
+/* TEXTO HERO */
 .hero-text h2{
-  font-size:3rem;
-  line-height:1.1;
-  color:var(--gold);
+  font-family: var(--font-heading);
+  font-size:3.5rem;
+  line-height:1.1;
+  color:var(--gold-primary);
+  margin-bottom: 25px;
 }
+@media(max-width:500px){
+    .hero-text h2{ font-size: 2.5rem; }
+}
+
 .hero-text p{
-  margin-top:20px;
-  font-size:1.15rem;
-  color:var(--muted);
+  font-size:1.2rem;
+  color:var(--text-muted);
+  margin-bottom: 25px;
 }
+
 .highlight{
-  margin-top:18px;
+  background: rgba(245, 193, 108, 0.05); /* Fundo sutil para destaque */
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid var(--gold-primary);
 }
 .highlight strong{
-  color:var(--gold);
+  color:var(--gold-primary);
+  font-weight: 700;
 }
 
-/* BOTÃO */
+/* BOTÃO CTA (Call to Action) */
 .cta{
-  display:inline-block;
-  margin-top:30px;
-  padding:18px 48px;
-  border-radius:40px;
-  background:linear-gradient(90deg,var(--gold),var(--gold2));
-  color:#2b0f0f;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:0 12px 35px rgba(245,193,108,.4);
-  transition:.3s;
+  display:inline-block;
+  margin-top:35px;
+  padding:20px 50px;
+  border-radius:50px;
+  background:linear-gradient(90deg,var(--gold-primary),var(--gold-light));
+  color:#2b0f0f;
+  font-weight:900;
+  font-family: var(--font-heading); /* Fonte do botão */
+  text-decoration:none;
+  letter-spacing: 0.5px;
+  box-shadow:0 15px 40px rgba(245,193,108,.3);
+  transition: all .3s ease;
 }
 .cta:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
+  box-shadow:0 20px 50px rgba(245,193,108,.5);
 }
 
-/* PRODUTO */
+/* --- CARD DO PRODUTO --- */
 .product-card{
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-    var(--bg2);
-  border-radius:28px;
-  padding:26px;
-  box-shadow:0 30px 70px rgba(0,0,0,.55);
-  border:1px solid rgba(255,255,255,.08);
-  text-align:center;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.08), rgba(0,0,0,.2)),
+    var(--bg-chocolate);
+  border-radius:30px;
+  padding:30px;
+  /* Sombra mais profunda e uma borda sutil dourada */
+  box-shadow:0 35px 80px rgba(0,0,0,.7);
+  border:1px solid rgba(245, 193, 108, 0.15);
+  text-align:center;
+  position: relative;
 }
 
-/* IMAGEM */
+/* IMAGEM DO PRODUTO */
+.product-img-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
 .product-card img{
-  width:100%;
-  border-radius:22px;
-  margin-bottom:22px;
-  box-shadow:0 25px 60px rgba(0,0,0,.65);
-  object-fit:cover;
+  width:100%;
+  border-radius:24px;
+  box-shadow:0 25px 50px rgba(0,0,0,.5);
+  object-fit:cover;
+  /* Filtro sutil para integrar a imagem ao ambiente escuro */
+  filter: contrast(1.05);
+  transition: transform 0.3s ease;
+}
+.product-card:hover img{
+    transform: scale(1.02); /* Leve zoom ao passar o mouse */
 }
 
 /* PREÇOS */
 .price-old{
-  text-decoration:line-through;
-  color:#cbb;
+  text-decoration:line-through;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
 }
 .free{
-  color:var(--gold);
-  font-size:1.9rem;
-  font-weight:900;
+  font-family: var(--font-heading);
+  color:var(--gold-primary);
+  font-size:2.2rem;
+  font-weight:900;
+  margin-bottom: 20px;
 }
 
-/* BENEFÍCIOS */
+/* --- SEÇÃO DE BENEFÍCIOS --- */
 .section{
-  max-width:1200px;
-  margin:90px auto;
-  padding:0 20px;
+  max-width:1200px;
+  margin:100px auto;
+  padding:0 20px;
 }
 .grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 @media(max-width:900px){
-  .grid{
-    grid-template-columns:1fr;
-  }
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 .card{
-  background:rgba(255,255,255,.04);
-  border-radius:24px;
-  padding:30px;
-  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);
+  border-radius:24px;
+  padding:35px 30px;
+  border:1px solid rgba(245, 193, 108, 0.1);
+  transition: .3s;
+}
+.card:hover{
+    background:rgba(255,255,255,.05);
+    border-color: rgba(245, 193, 108, 0.3);
 }
 .card h4{
-  color:var(--gold);
-  margin-bottom:10px;
+  font-family: var(--font-heading);
+  color:var(--gold-primary);
+  margin-bottom:15px;
+  font-size: 1.3rem;
+}
+.card p {
+    color: var(--text-muted);
 }
 
-/* FOOTER */
+/* --- FOOTER --- */
 footer{
-  margin-top:90px;
-  padding:40px 20px;
-  text-align:center;
-  color:#b9aaaa;
-  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:120px;
+  padding:50px 20px;
+  text-align:center;
+  color: var(--text-muted);
+  border-top:1px solid rgba(245, 193, 108, 0.1);
+  font-size: 0.9rem;
 }
 </style>
 </head>
@@ -171,36 +224,34 @@ footer{
 <section class="hero">
 
   <div class="hero-text">
-    <h2>Ovo de Páscoa<br>Gourmet Trufado</h2>
+        <h2>Trio Gourmet<br>de Colher</h2>
 
     <p>
-      Chocolate artesanal de alta qualidade, textura cremosa
-      e acabamento premium para uma experiência única.
+      Uma experiência completa com nossos sabores mais desejados: Morango com Chocolate Branco, Frutas Vermelhas e Coco Cremoso.
     </p>
 
-    <p class="highlight">
-      🎁 <strong>PRODUTO 100% GRÁTIS</strong><br>
-      Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.
-    </p>
+    <div class="highlight">
+      <p>🎁 <strong>OFERTA LIMITADA: PRODUTO GRÁTIS</strong></p>
+      <p>Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.</p>
+    </div>
 
     <a class="cta"
        href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-       Garantir Meu Ovo Gourmet
+       GARANTIR MEU TRIO
     </a>
   </div>
 
   <div class="product-card">
-
-        <img 
-      src="image_0.png"
-      alt="Ovo de Páscoa Gourmet Trufado">
+    <div class="product-img-container">
+            <img src="image_1.png" alt="Trio de Ovos de Páscoa Gourmet de Colher">
+    </div>
 
     <p class="price-old">De R$ 249,90</p>
-    <p class="free">GRÁTIS</p>
+    <p class="free">POR R$ 0,00</p>
 
     <a class="cta"
        href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-       Pagar Frete R$ 29,90
+       Pagar Apenas o Frete
     </a>
 
   </div>
@@ -210,23 +261,23 @@ footer{
 <section class="section">
   <div class="grid">
     <div class="card">
-      <h4>🍫 Chocolate Premium</h4>
-      <p>Seleção rigorosa de ingredientes e padrão gourmet.</p>
+      <h4>🍫 Sabores Premium</h4>
+      <p>Seleção dos melhores ingredientes para recheios cremosos e inesquecíveis.</p>
     </div>
     <div class="card">
-      <h4>🎁 Oferta Transparente</h4>
-      <p>O produto é gratuito. O valor pago é apenas do frete.</p>
+      <h4>🎁 Transparência Total</h4>
+      <p>O produto é um presente nosso. O único custo é a taxa de entrega.</p>
     </div>
     <div class="card">
-      <h4>🔒 Pagamento Seguro</h4>
-      <p>Checkout protegido e confiável via EvoPay.</p>
+      <h4>🔒 Compra Segura</h4>
+      <p>Ambiente criptografado. Seus dados estão 100% protegidos.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Páscoa Exclusiva</p>
-  <p>Promoção por tempo limitado • Frete R$ 29,90</p>
+  <p>© 2026 Páscoa Exclusiva. Todos os direitos reservados.</p>
+  <p>Promoção válida enquanto durarem os estoques • Frete R$ 29,90</p>
 </footer>
 
 </body>
