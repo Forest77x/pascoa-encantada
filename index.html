@@ -2,198 +2,233 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Páscoa Doce Encanto — Promoção Oficial</title>
+<title>Ovo de Luxo Trufado | Páscoa Exclusiva</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 :root{
-  --bg:#160606;
-  --card:#2b0f0f;
-  --accent:#f5c16c;
-  --accent-2:#ffdf9e;
+  --bg:#120505;
+  --bg2:#2a0d0d;
+  --gold:#f5c16c;
+  --gold2:#ffdf9e;
   --text:#ffffff;
-  --muted:#d2c6c6;
+  --muted:#d0c2c2;
 }
-*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Arial}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, Arial, sans-serif;
+}
+
 body{
   background:
-    radial-gradient(1200px 500px at 50% -10%, #3a1414, transparent),
+    radial-gradient(1200px 500px at 50% -10%, #3b1414, transparent),
     var(--bg);
   color:var(--text);
 }
+
+/* HEADER */
 header{
   padding:28px 20px;
   text-align:center;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 header h1{
-  color:var(--accent);
+  color:var(--gold);
   letter-spacing:.5px;
 }
-.badge{
-  display:inline-block;
-  margin-top:10px;
-  padding:6px 14px;
-  border-radius:999px;
-  background:linear-gradient(90deg,var(--accent),var(--accent-2));
-  color:#2b0f0f;
-  font-weight:700;
-  font-size:.85rem;
-}
+
+/* HERO */
 .hero{
-  max-width:1100px;
-  margin:60px auto 30px;
+  max-width:1200px;
+  margin:70px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:40px;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
 }
-@media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+}
+
+/* TEXTO */
 .hero-text h2{
   font-size:3rem;
   line-height:1.1;
-  color:var(--accent);
+  color:var(--gold);
 }
 .hero-text p{
-  margin-top:18px;
-  font-size:1.2rem;
+  margin-top:20px;
+  font-size:1.15rem;
   color:var(--muted);
 }
-.cta{
-  margin-top:28px;
-  display:inline-block;
-  padding:18px 46px;
-  border-radius:40px;
-  background:linear-gradient(90deg,var(--accent),var(--accent-2));
-  color:#2b0f0f;
-  font-weight:800;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(245,193,108,.35);
+.highlight{
+  margin-top:18px;
+  font-size:1.1rem;
 }
-.card{
+.highlight strong{
+  color:var(--gold);
+}
+
+/* BOTÃO */
+.cta{
+  display:inline-block;
+  margin-top:30px;
+  padding:18px 48px;
+  border-radius:40px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  color:#2b0f0f;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 12px 35px rgba(245,193,108,.4);
+  transition:.3s;
+}
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+/* CARD PRODUTO */
+.product-card{
   background:
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-    var(--card);
-  border-radius:26px;
+    var(--bg2);
+  border-radius:28px;
   padding:26px;
-  box-shadow:0 25px 60px rgba(0,0,0,.45);
+  box-shadow:0 30px 70px rgba(0,0,0,.55);
   border:1px solid rgba(255,255,255,.08);
-}
-.product{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:22px;
   text-align:center;
 }
+
+/* IMAGEM */
+.product-card img{
+  width:100%;
+  border-radius:22px;
+  margin-bottom:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.65);
+}
+
+/* PREÇO */
 .price-old{
+  margin-top:10px;
   text-decoration:line-through;
   color:#cbb;
 }
 .free{
-  color:var(--accent);
-  font-size:1.6rem;
+  color:var(--gold);
+  font-size:1.9rem;
   font-weight:900;
 }
-.features{
-  max-width:1100px;
-  margin:60px auto;
+
+/* SEÇÃO BENEFÍCIOS */
+.section{
+  max-width:1200px;
+  margin:90px auto;
   padding:0 20px;
+}
+.grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:26px;
+  gap:30px;
 }
-@media(max-width:900px){.features{grid-template-columns:1fr}}
-.feature{
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+.card{
   background:rgba(255,255,255,.04);
-  border-radius:22px;
-  padding:28px;
+  border-radius:24px;
+  padding:30px;
   border:1px solid rgba(255,255,255,.08);
 }
-.feature h4{color:var(--accent);margin-bottom:8px}
+.card h4{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+/* FOOTER */
 footer{
-  margin-top:80px;
-  padding:34px 20px;
+  margin-top:90px;
+  padding:40px 20px;
   text-align:center;
   color:#b9aaaa;
   border-top:1px solid rgba(255,255,255,.08);
 }
-svg{max-width:100%;height:auto}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Páscoa Doce Encanto</h1>
-  <span class="badge">Promoção Oficial de Páscoa</span>
+  <h1>Páscoa Exclusiva</h1>
 </header>
 
 <section class="hero">
+
   <div class="hero-text">
-    <h2>Ovo Trufado Premium<br>1,2 kg — 100% GRÁTIS</h2>
+    <h2>Ovo de Luxo<br>Trufado 1,2 kg</h2>
+
     <p>
-      Uma experiência gourmet completa.  
-      Você <strong>não paga pelo produto</strong>.  
-      Pague apenas o <strong>frete fixo de R$ 29,90</strong>.
+      Chocolate premium com recheio trufado intenso,
+      acabamento sofisticado e experiência digna de grandes marcas.
     </p>
-    <a class="cta" href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-      Receber Agora
+
+    <p class="highlight">
+      🎁 <strong>PRODUTO GRÁTIS</strong><br>
+      Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.
+    </p>
+
+    <a class="cta"
+       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
+       Garantir Meu Ovo de Luxo
     </a>
   </div>
 
-  <div class="card product">
-    <!-- ARTE EMBUTIDA (SEM ERRO 404) -->
-    <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#ffdf9e"/>
-          <stop offset="100%" stop-color="#f5c16c"/>
-        </linearGradient>
-        <radialGradient id="g2" cx="50%" cy="35%" r="60%">
-          <stop offset="0%" stop-color="#fff2c7"/>
-          <stop offset="100%" stop-color="#d49a3a"/>
-        </radialGradient>
-      </defs>
-      <rect x="0" y="0" width="400" height="420" rx="26" fill="#3a1414"/>
-      <ellipse cx="200" cy="235" rx="115" ry="155" fill="url(#g2)"/>
-      <ellipse cx="165" cy="190" rx="28" ry="40" fill="rgba(255,255,255,.35)"/>
-      <text x="200" y="60" text-anchor="middle" fill="#f5c16c"
-            font-size="22" font-weight="700">
-        Ovo Trufado 1,2 kg
-      </text>
-      <text x="200" y="385" text-anchor="middle" fill="#fff"
-            font-size="14">
-        Chocolate Premium • Recheio Trufado
-      </text>
-    </svg>
+  <div class="product-card">
 
-    <h3>Ovo Trufado Premium 1,2 kg</h3>
+    <!-- FOTO REAL DO OVO -->
+    <img
+      src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?q=80&w=1200&auto=format&fit=crop"
+      alt="Ovo de Páscoa Trufado de Luxo">
+
     <p class="price-old">De R$ 249,90</p>
     <p class="free">GRÁTIS</p>
-    <a class="cta" href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-      Pagar Frete R$ 29,90
+
+    <a class="cta"
+       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
+       Pagar Frete R$ 29,90
     </a>
+
   </div>
+
 </section>
 
-<section class="features">
-  <div class="feature">
-    <h4>Produto Premium</h4>
-    <p>Chocolate selecionado e recheio trufado de alta qualidade.</p>
-  </div>
-  <div class="feature">
-    <h4>Promoção Transparente</h4>
-    <p>Você não paga pelo produto. Valor refere-se apenas ao frete.</p>
-  </div>
-  <div class="feature">
-    <h4>Pagamento Seguro</h4>
-    <p>Checkout protegido diretamente pela EvoPay.</p>
+<section class="section">
+  <div class="grid">
+    <div class="card">
+      <h4>🍫 Qualidade Premium</h4>
+      <p>Ingredientes selecionados e padrão de chocolate de alto nível.</p>
+    </div>
+    <div class="card">
+      <h4>🎁 Oferta Clara</h4>
+      <p>Produto gratuito. O valor refere-se exclusivamente ao frete.</p>
+    </div>
+    <div class="card">
+      <h4>🔒 Pagamento Seguro</h4>
+      <p>Checkout protegido via EvoPay, rápido e confiável.</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Páscoa Doce Encanto</p>
-  <p>Promoção válida por tempo limitado. R$ 29,90 referentes ao frete e logística.</p>
+  <p>© 2026 Páscoa Exclusiva</p>
+  <p>Promoção por tempo limitado • Frete R$ 29,90</p>
 </footer>
 
 </body>
