@@ -7,157 +7,157 @@
 
 <style>
 :root{
-  --bg:#120505;
-  --bg2:#2a0d0d;
-  --gold:#f5c16c;
-  --gold2:#ffdf9e;
-  --text:#ffffff;
-  --muted:#d0c2c2;
+  --bg:#120505;
+  --bg2:#2a0d0d;
+  --gold:#f5c16c;
+  --gold2:#ffdf9e;
+  --text:#ffffff;
+  --muted:#d0c2c2;
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Inter, Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, Arial, sans-serif;
 }
 
 body{
-  background:
-    radial-gradient(1200px 500px at 50% -10%, #3b1414, transparent),
-    var(--bg);
-  color:var(--text);
+  background:
+    radial-gradient(1200px 500px at 50% -10%, #3b1414, transparent),
+    var(--bg);
+  color:var(--text);
 }
 
 /* HEADER */
 header{
-  padding:28px 20px;
-  text-align:center;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:28px 20px;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 header h1{
-  color:var(--gold);
-  letter-spacing:.5px;
+  color:var(--gold);
+  letter-spacing:.5px;
 }
 
 /* HERO */
 .hero{
-  max-width:1200px;
-  margin:70px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
+  max-width:1200px;
+  margin:70px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
 }
 
 @media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
+  .hero{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
 }
 
 /* TEXTO */
 .hero-text h2{
-  font-size:3rem;
-  line-height:1.1;
-  color:var(--gold);
+  font-size:3rem;
+  line-height:1.1;
+  color:var(--gold);
 }
 .hero-text p{
-  margin-top:20px;
-  font-size:1.15rem;
-  color:var(--muted);
+  margin-top:20px;
+  font-size:1.15rem;
+  color:var(--muted);
 }
 .highlight{
-  margin-top:18px;
+  margin-top:18px;
 }
 .highlight strong{
-  color:var(--gold);
+  color:var(--gold);
 }
 
 /* BOTÃO */
 .cta{
-  display:inline-block;
-  margin-top:30px;
-  padding:18px 48px;
-  border-radius:40px;
-  background:linear-gradient(90deg,var(--gold),var(--gold2));
-  color:#2b0f0f;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:0 12px 35px rgba(245,193,108,.4);
-  transition:.3s;
+  display:inline-block;
+  margin-top:30px;
+  padding:18px 48px;
+  border-radius:40px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  color:#2b0f0f;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 12px 35px rgba(245,193,108,.4);
+  transition:.3s;
 }
 .cta:hover{
-  transform:translateY(-2px);
+  transform:translateY(-2px);
 }
 
 /* PRODUTO */
 .product-card{
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-    var(--bg2);
-  border-radius:28px;
-  padding:26px;
-  box-shadow:0 30px 70px rgba(0,0,0,.55);
-  border:1px solid rgba(255,255,255,.08);
-  text-align:center;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
+    var(--bg2);
+  border-radius:28px;
+  padding:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
 }
 
 /* IMAGEM */
 .product-card img{
-  width:100%;
-  border-radius:22px;
-  margin-bottom:22px;
-  box-shadow:0 25px 60px rgba(0,0,0,.65);
-  object-fit:cover;
+  width:100%;
+  border-radius:22px;
+  margin-bottom:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.65);
+  object-fit:cover;
 }
 
 /* PREÇOS */
 .price-old{
-  text-decoration:line-through;
-  color:#cbb;
+  text-decoration:line-through;
+  color:#cbb;
 }
 .free{
-  color:var(--gold);
-  font-size:1.9rem;
-  font-weight:900;
+  color:var(--gold);
+  font-size:1.9rem;
+  font-weight:900;
 }
 
 /* BENEFÍCIOS */
 .section{
-  max-width:1200px;
-  margin:90px auto;
-  padding:0 20px;
+  max-width:1200px;
+  margin:90px auto;
+  padding:0 20px;
 }
 .grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 @media(max-width:900px){
-  .grid{
-    grid-template-columns:1fr;
-  }
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 .card{
-  background:rgba(255,255,255,.04);
-  border-radius:24px;
-  padding:30px;
-  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+  border-radius:24px;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.08);
 }
 .card h4{
-  color:var(--gold);
-  margin-bottom:10px;
+  color:var(--gold);
+  margin-bottom:10px;
 }
 
 /* FOOTER */
 footer{
-  margin-top:90px;
-  padding:40px 20px;
-  text-align:center;
-  color:#b9aaaa;
-  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:90px;
+  padding:40px 20px;
+  text-align:center;
+  color:#b9aaaa;
+  border-top:1px solid rgba(255,255,255,.08);
 }
 </style>
 </head>
@@ -165,69 +165,68 @@ footer{
 <body>
 
 <header>
-  <h1>Páscoa Exclusiva</h1>
+  <h1>Páscoa Exclusiva</h1>
 </header>
 
 <section class="hero">
 
-  <div class="hero-text">
-    <h2>Ovo de Páscoa<br>Gourmet Trufado</h2>
+  <div class="hero-text">
+    <h2>Ovo de Páscoa<br>Gourmet Trufado</h2>
 
-    <p>
-      Chocolate artesanal de alta qualidade, textura cremosa
-      e acabamento premium para uma experiência única.
-    </p>
+    <p>
+      Chocolate artesanal de alta qualidade, textura cremosa
+      e acabamento premium para uma experiência única.
+    </p>
 
-    <p class="highlight">
-      🎁 <strong>PRODUTO 100% GRÁTIS</strong><br>
-      Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.
-    </p>
+    <p class="highlight">
+      🎁 <strong>PRODUTO 100% GRÁTIS</strong><br>
+      Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.
+    </p>
 
-    <a class="cta"
-       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-       Garantir Meu Ovo Gourmet
-    </a>
-  </div>
+    <a class="cta"
+       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
+       Garantir Meu Ovo Gourmet
+    </a>
+  </div>
 
-  <div class="product-card">
+  <div class="product-card">
 
-    <!-- IMAGEM REAL DE OVO GOURMET -->
-    <img 
-      src="https://images.unsplash.com/photo-1589712235274-8d6c1c3c6d6b?q=80&w=1200&auto=format&fit=crop"
-      alt="Ovo de Páscoa Gourmet Trufado">
+        <img 
+      src="image_0.png"
+      alt="Ovo de Páscoa Gourmet Trufado">
 
-    <p class="price-old">De R$ 249,90</p>
-    <p class="free">GRÁTIS</p>
+    <p class="price-old">De R$ 249,90</p>
+    <p class="free">GRÁTIS</p>
 
-    <a class="cta"
-       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-       Pagar Frete R$ 29,90
-    </a>
+    <a class="cta"
+       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
+       Pagar Frete R$ 29,90
+    </a>
 
-  </div>
+  </div>
 
 </section>
 
 <section class="section">
-  <div class="grid">
-    <div class="card">
-      <h4>🍫 Chocolate Premium</h4>
-      <p>Seleção rigorosa de ingredientes e padrão gourmet.</p>
-    </div>
-    <div class="card">
-      <h4>🎁 Oferta Transparente</h4>
-      <p>O produto é gratuito. O valor pago é apenas do frete.</p>
-    </div>
-    <div class="card">
-      <h4>🔒 Pagamento Seguro</h4>
-      <p>Checkout protegido e confiável via EvoPay.</p>
-    </div>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <h4>🍫 Chocolate Premium</h4>
+      <p>Seleção rigorosa de ingredientes e padrão gourmet.</p>
+    </div>
+    <div class="card">
+      <h4>🎁 Oferta Transparente</h4>
+      <p>O produto é gratuito. O valor pago é apenas do frete.</p>
+    </div>
+    <div class="card">
+      <h4>🔒 Pagamento Seguro</h4>
+      <p>Checkout protegido e confiável via EvoPay.</p>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Páscoa Exclusiva</p>
-  <p>Promoção por tempo limitado • Frete R$ 29,90</p>
+  <p>© 2026 Páscoa Exclusiva</p>
+  <p>Promoção por tempo limitado • Frete R$ 29,90</p>
 </footer>
 
 </body>
