@@ -37,7 +37,6 @@ header{
 }
 header h1{
   color:var(--gold);
-  letter-spacing:.5px;
 }
 
 /* HERO */
@@ -70,7 +69,6 @@ header h1{
 }
 .highlight{
   margin-top:18px;
-  font-size:1.1rem;
 }
 .highlight strong{
   color:var(--gold);
@@ -93,7 +91,7 @@ header h1{
   transform:translateY(-2px);
 }
 
-/* CARD PRODUTO */
+/* PRODUTO */
 .product-card{
   background:
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
@@ -105,17 +103,17 @@ header h1{
   text-align:center;
 }
 
-/* IMAGEM */
+/* IMAGEM REAL */
 .product-card img{
   width:100%;
   border-radius:22px;
   margin-bottom:22px;
   box-shadow:0 25px 60px rgba(0,0,0,.65);
+  object-fit:cover;
 }
 
-/* PREÇO */
+/* PREÇOS */
 .price-old{
-  margin-top:10px;
   text-decoration:line-through;
   color:#cbb;
 }
@@ -125,7 +123,7 @@ header h1{
   font-weight:900;
 }
 
-/* SEÇÃO BENEFÍCIOS */
+/* BENEFÍCIOS */
 .section{
   max-width:1200px;
   margin:90px auto;
@@ -175,12 +173,12 @@ footer{
     <h2>Ovo de Luxo<br>Trufado 1,2 kg</h2>
 
     <p>
-      Chocolate premium com recheio trufado intenso,
-      acabamento sofisticado e experiência digna de grandes marcas.
+      Ovo premium com recheio cremoso, morangos frescos
+      e acabamento artesanal que impressiona no primeiro olhar.
     </p>
 
     <p class="highlight">
-      🎁 <strong>PRODUTO GRÁTIS</strong><br>
+      🎁 <strong>PRODUTO 100% GRÁTIS</strong><br>
       Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.
     </p>
 
@@ -192,10 +190,8 @@ footer{
 
   <div class="product-card">
 
-    <!-- FOTO REAL DO OVO -->
-    <img
-      src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?q=80&w=1200&auto=format&fit=crop"
-      alt="Ovo de Páscoa Trufado de Luxo">
+    <!-- SUA IMAGEM -->
+    <img src="ovo-luxo.jpg" alt="Ovo de Páscoa Trufado de Luxo">
 
     <p class="price-old">De R$ 249,90</p>
     <p class="free">GRÁTIS</p>
@@ -212,16 +208,16 @@ footer{
 <section class="section">
   <div class="grid">
     <div class="card">
-      <h4>🍫 Qualidade Premium</h4>
-      <p>Ingredientes selecionados e padrão de chocolate de alto nível.</p>
+      <h4>🍓 Recheio Premium</h4>
+      <p>Morangos selecionados e chocolate de alta qualidade.</p>
     </div>
     <div class="card">
       <h4>🎁 Oferta Clara</h4>
-      <p>Produto gratuito. O valor refere-se exclusivamente ao frete.</p>
+      <p>Você não paga pelo produto, apenas pelo frete.</p>
     </div>
     <div class="card">
       <h4>🔒 Pagamento Seguro</h4>
-      <p>Checkout protegido via EvoPay, rápido e confiável.</p>
+      <p>Checkout protegido via EvoPay.</p>
     </div>
   </div>
 </section>
