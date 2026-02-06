@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Páscoa Doce Encanto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --marrom: #2b0f0f;
+    --marrom-claro: #4b1c1c;
+    --dourado: #f5c16c;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--marrom);
+    color: var(--branco);
+}
+
+/* HEADER */
+header {
+    background-color: var(--marrom-claro);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--dourado);
+    font-size: 1.8rem;
+}
+
+nav a {
+    color: var(--branco);
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1612197520106-41c55f12a6f5") center/cover;
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: var(--dourado);
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 16px 48px;
+    background-color: var(--dourado);
+    color: var(--marrom);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+/* SEÇÕES */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--dourado);
+    font-size: 2.3rem;
+    margin-bottom: 60px;
+}
+
+/* PRODUTOS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product {
+    background-color: var(--marrom-claro);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.product img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin-top: 20px;
+}
+
+.price {
+    color: #ccc;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.free {
+    color: var(--dourado);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* PROMOÇÃO */
+.promo {
+    background: linear-gradient(90deg, #f5c16c, #d49a3a);
+    color: var(--marrom);
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.promo h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.promo p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* DIFERENCIAIS */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.feature {
+    background-color: var(--marrom-claro);
+    padding: 40px 25px;
+    border-radius: 18px;
+}
+
+.feature h4 {
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a0707;
+    text-align: center;
+    padding: 40px 20px;
+    color: #bbb;
+    font-size: 0.95rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Páscoa Doce Encanto</h1>
+    <nav>
+        <a href="#produtos">Produtos</a>
+        <a href="#promo">Promoção</a>
+        <a href="#info">Informações</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Produtos de Páscoa 100% GRATUITOS</h2>
+    <p>
+        Durante nossa promoção especial, todos os chocolates são totalmente
+        <strong>GRÁTIS</strong>.  
+        Você paga apenas o <strong>frete fixo de R$ 29,90</strong> para envio
+        seguro até sua casa.
+    </p>
+    <a href="#produtos" class="btn">Receber Grátis</a>
+</section>
+
+<section class="section" id="produtos">
+    <h2 class="section-title">Escolha Seu Presente de Páscoa</h2>
+
+    <div class="products">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1589187155474-5cbd02ed5d84">
+            <h3>Ovo Premium 500g</h3>
+            <p class="price">De R$ 129,90</p>
+            <p class="free">GRÁTIS</p>
+            <a href="COLE_AQUI_SUA_WALLET" class="btn">Pagar Frete R$ 29,90</a>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1606312619344-3e1d4f8c6b3b">
+            <h3>Caixa Trufada Luxo</h3>
+            <p class="price">De R$ 89,90</p>
+            <p class="free">GRÁTIS</p>
+            <a href="COLE_AQUI_SUA_WALLET" class="btn">Pagar Frete R$ 29,90</a>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c">
+            <h3>Kit Família Páscoa</h3>
+            <p class="price">De R$ 199,90</p>
+            <p class="free">GRÁTIS</p>
+            <a href="COLE_AQUI_SUA_WALLET" class="btn">Pagar Frete R$ 29,90</a>
+        </div>
+    </div>
+</section>
+
+<section class="promo" id="promo">
+    <h2>Promoção Especial de Páscoa</h2>
+    <p>
+        Todos os produtos desta página são <strong>100% gratuitos</strong>.  
+        O valor de <strong>R$ 29,90</strong> refere-se exclusivamente ao frete,
+        embalagem e logística de envio.
+    </p>
+    <a href="COLE_AQUI_SUA_WALLET" class="btn">Garantir Agora</a>
+</section>
+
+<section class="section" id="info">
+    <h2 class="section-title">Por Que Aproveitar?</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h4>Produtos Gratuitos</h4>
+            <p>Você não paga pelos chocolates.</p>
+        </div>
+
+        <div class="feature">
+            <h4>Frete Único</h4>
+            <p>Valor fixo de R$ 29,90.</p>
+        </div>
+
+        <div class="feature">
+            <h4>Envio Seguro</h4>
+            <p>Embalagem reforçada e entrega confiável.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Páscoa Doce Encanto</p>
+    <p>
+        Promoção válida por tempo limitado.  
+        Valor de R$ 29,90 referente exclusivamente ao frete e logística.
+    </p>
+</footer>
+
+</body>
+</html>
