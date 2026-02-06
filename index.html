@@ -6,278 +6,240 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
-/* --- CONFIGURAÇÕES GERAIS E CORES --- */
-:root{
-  --bg-dark: #0f0404; /* Fundo mais profundo */
-  --bg-chocolate: #2a0d0d;
-  --gold-primary: #f5c16c;
-  --gold-light: #ffdf9e;
-  --text-light: #ffffff;
-  --text-muted: #d0c2c2;
-  --font-heading: 'Playfair Display', serif; /* Fonte sofisticada para títulos */
-  --font-body: 'Inter', sans-serif; /* Fonte limpa para leitura */
+/* --- ESTILO LUXO --- */
+:root {
+    --bg-deep: #0a0303;
+    --bg-card: #1c0a0a;
+    --gold: #d4af37;
+    --gold-light: #f9e5a1;
+    --text-main: #f0f0f0;
+    --text-muted: #a89f9f;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: radial-gradient(circle at top center, #3e1212 0%, var(--bg-deep) 70%);
+    color: var(--text-main);
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
 }
 
-body{
-  font-family: var(--font-body);
-  /* Gradiente de fundo mais rico e profundo */
-  background:
-    radial-gradient(circle at 50% 0%, rgba(94, 33, 33, 0.4) 0%, transparent 60%),
-    linear-gradient(to bottom, #1a0808, #0d0202);
-  color:var(--text-light);
-  line-height: 1.6;
-}
-
-/* --- HEADER --- */
-header{
-  padding:30px 20px;
-  text-align:center;
-  border-bottom:1px solid rgba(245, 193, 108, 0.1); /* Linha sutil dourada */
-}
-header h1{
-  font-family: var(--font-heading);
-  color:var(--gold-primary);
-  letter-spacing: 1px;
-  font-size: 1.8rem;
-}
-
-/* --- HERO SECTION (Principal) --- */
-.hero{
-  max-width:1200px;
-  margin:80px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:1fr 0.8fr; /* Ajuste para equilibrar texto e imagem */
-  gap:70px;
-  align-items: center;
-}
-
-@media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    gap:50px;
+/* HEADER */
+header {
     text-align: center;
-  }
+    padding: 40px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+header h1 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* TEXTO HERO */
-.hero-text h2{
-  font-family: var(--font-heading);
-  font-size:3.5rem;
-  line-height:1.1;
-  color:var(--gold-primary);
-  margin-bottom: 25px;
-}
-@media(max-width:500px){
-    .hero-text h2{ font-size: 2.5rem; }
-}
-
-.hero-text p{
-  font-size:1.2rem;
-  color:var(--text-muted);
-  margin-bottom: 25px;
+/* HERO SECTION */
+.hero {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
-.highlight{
-  background: rgba(245, 193, 108, 0.05); /* Fundo sutil para destaque */
-  padding: 20px;
-  border-radius: 15px;
-  border-left: 4px solid var(--gold-primary);
-}
-.highlight strong{
-  color:var(--gold-primary);
-  font-weight: 700;
+@media(max-width: 900px) {
+    .hero { grid-template-columns: 1fr; text-align: center; gap: 40px; }
 }
 
-/* BOTÃO CTA (Call to Action) */
-.cta{
-  display:inline-block;
-  margin-top:35px;
-  padding:20px 50px;
-  border-radius:50px;
-  background:linear-gradient(90deg,var(--gold-primary),var(--gold-light));
-  color:#2b0f0f;
-  font-weight:900;
-  font-family: var(--font-heading); /* Fonte do botão */
-  text-decoration:none;
-  letter-spacing: 0.5px;
-  box-shadow:0 15px 40px rgba(245,193,108,.3);
-  transition: all .3s ease;
-}
-.cta:hover{
-  transform:translateY(-3px);
-  box-shadow:0 20px 50px rgba(245,193,108,.5);
-}
-
-/* --- CARD DO PRODUTO --- */
-.product-card{
-  background:
-    linear-gradient(160deg, rgba(255,255,255,.08), rgba(0,0,0,.2)),
-    var(--bg-chocolate);
-  border-radius:30px;
-  padding:30px;
-  /* Sombra mais profunda e uma borda sutil dourada */
-  box-shadow:0 35px 80px rgba(0,0,0,.7);
-  border:1px solid rgba(245, 193, 108, 0.15);
-  text-align:center;
-  position: relative;
-}
-
-/* IMAGEM DO PRODUTO */
-.product-img-container {
-    position: relative;
+/* TEXTO */
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 25px;
 }
-
-.product-card img{
-  width:100%;
-  border-radius:24px;
-  box-shadow:0 25px 50px rgba(0,0,0,.5);
-  object-fit:cover;
-  /* Filtro sutil para integrar a imagem ao ambiente escuro */
-  filter: contrast(1.05);
-  transition: transform 0.3s ease;
-}
-.product-card:hover img{
-    transform: scale(1.02); /* Leve zoom ao passar o mouse */
-}
-
-/* PREÇOS */
-.price-old{
-  text-decoration:line-through;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-.free{
-  font-family: var(--font-heading);
-  color:var(--gold-primary);
-  font-size:2.2rem;
-  font-weight:900;
-  margin-bottom: 20px;
-}
-
-/* --- SEÇÃO DE BENEFÍCIOS --- */
-.section{
-  max-width:1200px;
-  margin:100px auto;
-  padding:0 20px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-@media(max-width:900px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-}
-.card{
-  background:rgba(255,255,255,.03);
-  border-radius:24px;
-  padding:35px 30px;
-  border:1px solid rgba(245, 193, 108, 0.1);
-  transition: .3s;
-}
-.card:hover{
-    background:rgba(255,255,255,.05);
-    border-color: rgba(245, 193, 108, 0.3);
-}
-.card h4{
-  font-family: var(--font-heading);
-  color:var(--gold-primary);
-  margin-bottom:15px;
-  font-size: 1.3rem;
-}
-.card p {
+.hero-text p {
+    font-size: 1.2rem;
     color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-/* --- FOOTER --- */
-footer{
-  margin-top:120px;
-  padding:50px 20px;
-  text-align:center;
-  color: var(--text-muted);
-  border-top:1px solid rgba(245, 193, 108, 0.1);
-  font-size: 0.9rem;
+/* DESTAQUE DE OFERTA */
+.offer-box {
+    border: 1px solid var(--gold);
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(212, 175, 55, 0.05);
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.offer-box strong { color: var(--gold); }
+
+/* BOTÃO PREMIUM */
+.btn-gold {
+    display: inline-block;
+    padding: 22px 55px;
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+    border-radius: 50px;
+    color: #261105;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(191, 149, 63, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(191, 149, 63, 0.5);
+}
+
+/* CARD DO PRODUTO (IMAGEM) */
+.product-frame {
+    position: relative;
+    padding: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 200px 200px 20px 20px; /* Formato arco sofisticado */
+    background: var(--bg-card);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.product-frame img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 190px 190px 10px 10px;
+    display: block;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.price-tag {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-deep);
+    border: 1px solid var(--gold);
+    padding: 15px 40px;
+    border-radius: 50px;
+    white-space: nowrap;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.price-tag span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+.price-tag strong {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+/* BENEFÍCIOS */
+.features {
+    max-width: 1100px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+@media(max-width: 900px){ .features { grid-template-columns: 1fr; } }
+
+.feature-card {
+    background: rgba(255,255,255,0.03);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 1px solid var(--gold);
+    text-align: center;
+}
+.feature-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+    margin-top: 80px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Páscoa Exclusiva</h1>
+    <h1>Páscoa Signature</h1>
 </header>
 
 <section class="hero">
+    <div class="hero-text">
+        <h2>O Trio<br>Perfeito</h2>
+        <p>
+            Uma seleção curada para os paladares mais exigentes. 
+            Sabores intensos, texturas aveludadas e a pureza do 
+            cacau de origem em três experiências únicas de colher.
+        </p>
 
-  <div class="hero-text">
-        <h2>Trio Gourmet<br>de Colher</h2>
+        <div class="offer-box">
+            <p>CONVITE EXCLUSIVO</p>
+            <p>Seu Trio Gourmet é <strong>100% GRÁTIS</strong>.</p>
+            <p style="font-size:0.9rem; margin-top:5px; color:#fff;">(Apenas taxa de envio R$ 29,90)</p>
+        </div>
 
-    <p>
-      Uma experiência completa com nossos sabores mais desejados: Morango com Chocolate Branco, Frutas Vermelhas e Coco Cremoso.
-    </p>
-
-    <div class="highlight">
-      <p>🎁 <strong>OFERTA LIMITADA: PRODUTO GRÁTIS</strong></p>
-      <p>Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.</p>
-    </div>
-
-    <a class="cta"
-       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-       GARANTIR MEU TRIO
-    </a>
-  </div>
-
-  <div class="product-card">
-    <div class="product-img-container">
-            <img src="image_1.png" alt="Trio de Ovos de Páscoa Gourmet de Colher">
+        <br>
+        <a href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i" class="btn-gold">
+            Resgatar Convite
+        </a>
     </div>
 
-    <p class="price-old">De R$ 249,90</p>
-    <p class="free">POR R$ 0,00</p>
-
-    <a class="cta"
-       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
-       Pagar Apenas o Frete
-    </a>
-
-  </div>
-
+    <div class="product-frame">
+        <img 
+            src="trio.jpg" 
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1616031026691-0309998e360c?q=80&w=1000&auto=format&fit=crop';"
+            alt="Trio de Ovos Gourmet">
+        
+        <div class="price-tag">
+            <span>De R$ 249,90</span>
+            <strong>POR R$ 0,00</strong>
+        </div>
+    </div>
 </section>
 
-<section class="section">
-  <div class="grid">
-    <div class="card">
-      <h4>🍫 Sabores Premium</h4>
-      <p>Seleção dos melhores ingredientes para recheios cremosos e inesquecíveis.</p>
-    </div>
-    <div class="card">
-      <h4>🎁 Transparência Total</h4>
-      <p>O produto é um presente nosso. O único custo é a taxa de entrega.</p>
-    </div>
-    <div class="card">
-      <h4>🔒 Compra Segura</h4>
-      <p>Ambiente criptografado. Seus dados estão 100% protegidos.</p>
-    </div>
-  </div>
+<section class="features">
+    <div class="feature-card">
+        <h3>Cacau Nobre</h3>
+        <p>Blend exclusivo de chocolates belgas.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Artesanal</h3>
+        <p>Feito à mão por chocolatiers premiados.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Entrega Segura</h3>
+        <p>Embalagem térmica para proteção total.</p>
+    </div>
 </section>
 
 <footer>
-  <p>© 2026 Páscoa Exclusiva. Todos os direitos reservados.</p>
-  <p>Promoção válida enquanto durarem os estoques • Frete R$ 29,90</p>
+    <p>© 2026 Páscoa Signature. Todos os direitos reservados.</p>
 </footer>
 
 </body>
